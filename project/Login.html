@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <form action="Login.html" class="login-form">
+            <h1>Login</h1>
+            <div class="txtb">
+                <input type="text">
+                <span placeholder="Username"></span>
+            </div>
+
+            <div class="txtb">
+                <input type="password">
+                <span placeholder="Password"></span>
+            </div>
+
+            <input type="submit" class="logbtn" value="Login">
+
+            <div class="bottom-text">
+                Don't have an account?<br><a href="#">Create an account!</a>
+            </div>
+        </form>
+        <script type="text/javascript">
+            $(".txtb input").on("focus",function () {
+                $(this).addClass("focus");
+            });
+
+            $(".txtb input").on("blur",function () {
+                if($(this).val() == "")
+                $(this).removeClass("focus");
+            });
+        </script>
+
+    </body>
+</html>
